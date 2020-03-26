@@ -1,0 +1,7 @@
+.row {
+  height: 200px;
+}
+.col-6 {
+  border: solid 2px pink;
+  background-color: yellow;
+}

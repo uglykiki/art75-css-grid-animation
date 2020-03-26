@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans|Roboto+Condensed&display=swap");
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* BASIC GRID - grid.html */
@@ -47,7 +47,7 @@ body {
   grid-area: 2/3/4/6;
 }
 
-/* BLOG STYLE */
+/* BLOG STYLE - blog.html */
 .blog-grid {
   display: grid;
   grid-template-areas:
@@ -81,13 +81,6 @@ body {
 
 .footer {
   grid-area: footer;
-}
-
-/* Responsive Design */
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: pink;
-  }
 }
 
 /* FLEX BOX - flexbox.html */
@@ -137,11 +130,15 @@ body {
 .container {
   position: absolute;
   overflow-y: hidden;
+  height: 800px;
 }
 
 .drake {
-  top: 80px;
+  top: 200px;
   left: 40px;
+  -webkit-animation: drake 2s infinite ease-in-out; /* Safari 4+ */
+  -moz-animation: drake 2s infinite ease-in-out; /* Fx 5+ */
+  -o-animation: drake 2s infinite ease-in-out; /* Opera 12+ */
   animation: drake 2s infinite ease-in-out;
 }
 
@@ -187,6 +184,46 @@ body {
   animation: future 2s infinite ease-in-out;
 }
 
+@-moz-keyframes drake {
+  0% {
+    transform: translate(0px, 2px);
+  }
+
+  50% {
+    transform: translate(0px, 10px);
+  }
+
+  100% {
+    transform: translate(0px, 2px);
+  }
+}
+@-o-keyframes drake {
+  0% {
+    transform: translate(0px, 2px);
+  }
+
+  50% {
+    transform: translate(0px, 10px);
+  }
+
+  100% {
+    transform: translate(0px, 2px);
+  }
+}
+@-webkit-keyframes drake {
+  0% {
+    transform: translate(0px, 2px);
+  }
+
+  50% {
+    transform: translate(0px, 10px);
+  }
+
+  100% {
+    transform: translate(0px, 2px);
+  }
+}
+
 @keyframes drake {
   0% {
     transform: translate(0px, 2px);
@@ -198,6 +235,18 @@ body {
 
   100% {
     transform: translate(0px, 2px);
+  }
+}
+
+@keyframes drake {
+  0% {
+    transform: rotateZ(90deg) translate(0px, 20px) scale(2);
+  }
+  50% {
+    transform: rotateZ(180deg) translate(20px, 40px) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) translate(40px, 60px) scale(1.5);
   }
 }
 
@@ -340,4 +389,28 @@ iPhone 6/7/8/Plus: 414px
 */
 
 @media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    width: 800px;
+  }
+  .background {
+    width: 100%;
+    height: auto;
+  }
+  .right-text {
+    width: 100%;
+    position: absolute;
+    z-index: 5;
+    bottom: 200px;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: pink;
+  }
+}
+
+@media only screen and (max-width: 415px) {
 }
