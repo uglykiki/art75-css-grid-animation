@@ -1,135 +1,127 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
-/* BASIC GRID */
+/* BASIC GRID - grid.html */
 .grid-container {
-    padding: 24px;
-    display: grid;
-    /*The number and the width of columns*/
-    grid-template-columns: 40px 80px auto 40px auto 80px;
+  padding: 24px;
+  display: grid;
+  /*The number and the width of columns*/
+  grid-template-columns: 40px 80px auto 40px auto 80px;
 
-    /*for responsive design*/
-    /* grid-template-columns: 10% 60% auto 30% auto;  */
+  /*for responsive design*/
+  /* grid-template-columns: 10% 60% auto 30% auto;  */
 
-    /*The number and the height of rows*/
-    grid-template-rows: 80px 240px 160px 80px 320px 160px;
+  /*The number and the height of rows*/
+  grid-template-rows: 80px 240px 160px 80px 320px 160px;
 
-    /*Set the gap*/
-    grid-gap: 4px;
-    /* grid-column-gap: 24px;
+  /*Set the gap*/
+  grid-gap: 4px;
+  /* grid-column-gap: 24px;
     grid-row-gap: 24px; */
-
-
 }
 
 .grid-item img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .item1 {
-    grid-row-start: 1;
-    grid-row-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 
 .item7 {
-    grid-column: 3/5;
+  grid-column: 3/5;
 }
 
 .item8 {
-    grid-row: 2/4;
+  grid-row: 2/4;
 }
 
 .item14 {
-    grid-area: 2/3/4/6;
+  grid-area: 2/3/4/6;
 }
-
 
 /* BLOG STYLE */
 .blog-grid {
-    display: grid;
-    grid-template-areas:
-        'header header header header header'
-        'leftbar main main main rightbar'
-        'footer footer footer footer footer';
-    grid-gap: 4px;
-    padding: 10px;
+  display: grid;
+  grid-template-areas:
+    "header header header header header"
+    "leftbar main main main rightbar"
+    "footer footer footer footer footer";
+  grid-gap: 4px;
+  padding: 10px;
 }
 
 .blog-item {
-    border: solid 1px black;
+  border: solid 1px black;
 }
 
 .blog-item img {
-    width: 100%;
+  width: 100%;
 }
 
 /* Define the name of grid area */
 .header {
-    grid-area: header;
+  grid-area: header;
 }
 
 .leftbar {
-    grid-area: leftbar;
+  grid-area: leftbar;
 }
 
 .rightbar {
-    grid-area: rightbar;
+  grid-area: rightbar;
 }
 
 .footer {
-    grid-area: footer;
+  grid-area: footer;
 }
 
 /* Responsive Design */
 @media only screen and (max-width: 600px) {
-    body {
-        background-color: pink;
-    }
+  body {
+    background-color: pink;
+  }
 }
 
-
-
-/* FLEX BOX */
+/* FLEX BOX - flexbox.html */
 .flex-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: 540px;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 540px;
+  align-items: center;
 }
 
 .flex1 {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .flex2 {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .flex3 {
-    flex-grow: 6;
+  flex-grow: 6;
 }
-
-
-
 
 .flex-item {
-    width: 300px;
-    height: 300px;
-    overflow: hidden;
-    padding: 4px;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  padding: 4px;
 }
 
-
-
-/* animation */
+/* ANIMATION - animation.html */
 .animation-bg {
-    background-color: black;
+  background-color: black;
 }
 
 .drake,
@@ -139,163 +131,213 @@ body {
 .avanger,
 .today,
 .got {
-    position: absolute;
+  position: absolute;
 }
 
 .container {
-    position: absolute;
-    overflow-y: hidden;
+  position: absolute;
+  overflow-y: hidden;
 }
 
 .drake {
-    top: 80px;
-    left: 40px;
-    animation: drake 2s infinite ease-in-out;
+  top: 80px;
+  left: 40px;
+  animation: drake 2s infinite ease-in-out;
 }
 
 .avanger {
-    top: 480px;
-    left: 100px;
-    animation: avanger 2s infinite ease-in-out;
+  top: 480px;
+  left: 100px;
+  animation: avanger 2s infinite ease-in-out;
 }
 
 .tientang {
-    right: 40px;
-    animation: tientang 2s infinite ease-in-out;
+  right: 40px;
+  animation: tientang 2s infinite ease-in-out;
 }
 
 .character {
-    right: 160px;
-    bottom: -80px;
-    z-index: 5;
-    transition: 3s ease-in-out;
-    cursor: pointer;
+  right: 160px;
+  bottom: -80px;
+  z-index: 5;
+  transition: 3s ease-in-out;
+  cursor: pointer;
 }
 
 .character:hover {
-    right: 200px;
-    bottom: -10px;
-
+  right: 200px;
+  bottom: -10px;
 }
 
 .got {
-    left: 300px;
-    top: 300px;
-    animation: got 2s infinite ease-in-out;
+  left: 300px;
+  top: 300px;
+  animation: got 2s infinite ease-in-out;
 }
 
 .today {
-    right: 20px;
-    bottom: 240px;
-    animation: today 2s infinite ease-in-out;
+  right: 20px;
+  bottom: 240px;
+  animation: today 2s infinite ease-in-out;
 }
 
 .future {
-    left: 220px;
-    top: 300px;
-    animation: future 2s infinite ease-in-out;
+  left: 220px;
+  top: 300px;
+  animation: future 2s infinite ease-in-out;
 }
 
-
 @keyframes drake {
+  0% {
+    transform: translate(0px, 2px);
+  }
 
-    0% {
-        transform: translate(0px, 2px);
-    }
+  50% {
+    transform: translate(0px, 10px);
+  }
 
-    50% {
-        transform: translate(0px, 10px);
-    }
-
-    100% {
-        transform: translate(0px, 2px);
-    }
+  100% {
+    transform: translate(0px, 2px);
+  }
 }
 
 @keyframes tientang {
+  0% {
+    transform: translate(0px, 0px);
+  }
 
-    0% {
-        transform: translate(0px, 0px);
-    }
+  20% {
+    transform: translate(20px, 0px);
+  }
 
-    20% {
-        transform: translate(20px, 0px);
-    }
-
-    100% {
-        transform: translate(0px, 0px);
-    }
-
+  100% {
+    transform: translate(0px, 0px);
+  }
 }
 
-
 @keyframes got {
+  0% {
+    opacity: 0.2;
+    transform: translate(0px, -50px);
+  }
 
-    0% {
-        opacity: 0.2;
-        transform: translate(0px, -50px);
+  50% {
+    opacity: 1;
+    transform: translate(0px, 50px);
+  }
 
-    }
-
-    50% {
-        opacity: 1;
-        transform: translate(0px, 50px);
-    }
-
-    100% {
-        opacity: 0.5;
-        transform: translate(0px, -50px);
-    }
+  100% {
+    opacity: 0.5;
+    transform: translate(0px, -50px);
+  }
 }
 
 @keyframes avanger {
+  0% {
+    transform: translate(0px, 2px);
+  }
 
-    0% {
-        transform: translate(0px, 2px);
-    }
+  50% {
+    transform: translate(8px, 8px);
+  }
 
-    50% {
-        transform: translate(8px, 8px);
-    }
-
-    100% {
-        transform: translate(0px, 2px);
-    }
+  100% {
+    transform: translate(0px, 2px);
+  }
 }
 
 @keyframes today {
+  0% {
+    transform: translate(0px, 2px);
+    opacity: 0;
+  }
 
-    0% {
-        transform: translate(0px, 2px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translate(0px, -20px);
-        opacity: 1;
-
-    }
-
-
+  100% {
+    transform: translate(0px, -20px);
+    opacity: 1;
+  }
 }
 
 @keyframes future {
+  0% {
+    transform: translate(0px, -200px);
+  }
 
-    0% {
-        transform: translate(0px, -200px);
-    }
-
-    100% {
-        transform: translate(0px, 200px);
-
-    }
-
-
+  100% {
+    transform: translate(0px, 200px);
+  }
+}
+.right-text {
+  float: right;
+  color: white;
+  padding: 48px;
+  width: 50%;
 }
 
-.right-text {
-    float: right;
-    color: white;
-    padding: 48px;
-    width: 50%;
+/* VIDEO ANIMATION - animation-video.html */
+.video-background {
+  background-color: black;
+}
+iframe {
+  opacity: 0.7;
+  border-radius: 50%;
+  /* filter: blur(10px); */
+}
+.video1 {
+  width: 800px;
+  height: 400px;
+  animation: video 5s infinite ease-in-out;
+}
+.video2 {
+  width: 400px;
+  height: 200px;
+  animation: video 5s infinite ease-in-out;
+}
+.video3 {
+  width: 200px;
+  height: 100px;
+  animation: video 5s infinite ease-in-out;
+}
+.video4 {
+  width: 100px;
+  height: 50px;
+  animation: video 5s infinite ease-in-out;
+}
+
+@keyframes video {
+  0% {
+    transform: translate(400px, 0px);
+    transform: rotate(90deg);
+    transform: scaleX(2);
+  }
+  25% {
+    transform: translate(400px, 400px);
+    transform: rotate(180deg);
+    transform: scaleX(0.5);
+  }
+  50% {
+    transform: translate(-400px, 400px);
+    transform: rotate(270deg);
+  }
+  75% {
+    transform: translate(-400px, -400px);
+    transform: rotate(360deg);
+    transform: scaleY(1.5);
+  }
+
+  100% {
+    transform: translate(400px, 0px);
+    transform: rotate(0deg);
+    transform: scaleY(3);
+  }
+}
+
+/* Responsive Design
+iPad: 768px
+iPad Pro: 1024px
+iPhoneX: 375px
+iPhone 6/7/8/Plus: 414px 
+*/
+
+@media only screen and (max-width: 768px) {
 }
